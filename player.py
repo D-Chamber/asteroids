@@ -29,11 +29,11 @@ class Player(circleshape.CircleShape):
         keys = pygame.key.get_pressed()
         self.timer -= dt
 
-        if keys[pygame.K_r]:
+        if keys[pygame.K_r] or keys[pygame.K_a]:
             self.rotate(-dt)
-        if keys[pygame.K_t]:
+        if keys[pygame.K_t] or keys[pygame.K_d]:
             self.rotate(dt)
-        if keys[pygame.K_c]:
+        if keys[pygame.K_c] or keys[pygame.K_w]:
             self.move(dt)
         if keys[pygame.K_s]:
             self.move(-dt)
